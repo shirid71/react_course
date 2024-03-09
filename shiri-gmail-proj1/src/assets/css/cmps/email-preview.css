@@ -1,0 +1,217 @@
+.email-preview {
+    background: #e96b9509;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 11px #0000002b;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.email-preview .info {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+
+
+.email-preview .actions a {
+    color: white;
+}
+
+.email-preview:hover .actions {
+    transform: translateY(0);
+}
+
+.email-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-color: aqua;
+    align-items: start;
+  }
+  
+  /* Style for the sender's name */
+  .sender {
+    font-weight: bold;
+  }
+
+  .email-item a{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .email-link-read{
+    display: flex;
+  }
+
+  .email-link-unread{
+    display: flex;
+    font-weight: bold;
+  }
+
+
+  .subjectz {
+    color: #333;
+  }
+
+  .email-bodyz {
+    color: #333;
+    align-items: start;
+  }
+
+  .timestampz {
+    color: #666;
+    align-items: start;
+  }
+
+  .starz {
+    width: 20px;
+    height: 20px;
+    background: rgba(229, 229, 229, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .star:hover  {
+    background: rgba(81, 111, 173, 1);
+    filter: brightness(80%);
+}
+
+  
+  /* Keep image darkened after being clicked */
+  .star.clicked {
+    filter: brightness(80%);
+  }
+
+  .star {
+  align-items: center;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 20px;
+}
+
+  
+  .from{
+  display: flex;
+  flex-basis: 168px;
+  max-width: 168px;
+  padding-left: 0;
+  padding-right: 32px; 
+  }
+
+.subject{
+    font-family: "Google Sans",Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .875rem;
+    letter-spacing: normal;
+    display: flex;
+    flex: 1 1 auto;
+    height: auto;
+    min-width: 0;
+    padding-right: 10px; 
+}
+
+.email-body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-basis: 0;
+    box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+}
+
+.timestamp{
+    font-family: "Google Sans",Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .75rem;
+    letter-spacing: normal;
+    flex-basis: 56px;
+    justify-content: flex-end;
+    padding-left: 0;
+    padding-right: 16px;
+}
+
+.action-buttons {
+    grid-area: a;
+    display: flex;
+}
+
+.action-buttons button {
+    margin-left: 5px;
+}
+
+.email-preview:hover .timestamp {
+    display: none; 
+}
+
+.delete-button{
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.delete-button:hover::before {
+    content: ""; 
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(152, 152, 152, 0.5); 
+    z-index: 1; 
+  }
+
+.star-button {
+    grid-area: s;
+    margin-right: 10px;
+    position: relative;
+    border: none;
+    background: none;
+    color: #c4c7c5;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.star-button:hover::before {
+    content: ""; /* Necessary for the pseudo-element */
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    width: 30px; /* Adjust size of the circle */
+    height: 30px; /* Adjust size of the circle */
+    border-radius: 50%;
+    background-color: rgba(152, 152, 152, 0.5); /* Adjust color and opacity of the circle */
+    z-index: 1; /* Ensure the circle appears above the icon */
+  }
+
+  .email-preview.starred .star-button {
+    color: rgb(222, 185, 0); 
+}
