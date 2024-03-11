@@ -1,0 +1,11 @@
+
+.email-index {
+    display: grid;
+    grid-template-columns: auto repeat(3, 2fr);
+    grid-template-rows: auto auto repeat(3, 2fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+}

@@ -1,0 +1,13 @@
+.email-list {
+    height: calc(100vh - 64px - 16px);
+    grid-area: 2 / 2 / 6 / 5;
+    background-color: var(--bcgd-main);
+    border-radius: 16px;
+    padding-top: 60px;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+
